@@ -62,12 +62,17 @@ export default function App() {
                 <BottomTab.Screen 
                     name="welcome" 
                     component={WelcomeScreen} 
-   
+                    options={{
+                        tabBarIcon: ({color, size}) => <Ionicons name="home" color={color} size={size} />
+                    }}
                 />
                 <BottomTab.Screen  
                     name="user" 
                     component={UserScreen} 
-
+                    options={{
+                        tabBarIcon: ({color, size}) => <Ionicons name="person" color={color} size={size} />
+//                     }}    
+                    }}
                 />
             </BottomTab.Navigator>
         </NavigationContainer>
