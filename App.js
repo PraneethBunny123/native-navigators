@@ -1,14 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { NavigationContainer } from "@react-navigation/native";
+
+import WelcomeScreen from './screens/WelcomeScreen'
+
+const Drawer = createDrawerNavigator()
 
 export default function App() {
-  return (
-    <View>
-      <Text>hhkjbjhdsbvhbJDBC</Text>
-    </View>
-  );
+    return (
+        <NavigationContainer>
+            <Drawer.Navigator>
+                <Drawer.Screen name="welcome" component={WelcomeScreen} />
+            </Drawer.Navigator>
+        </NavigationContainer>
+    );
 }
 
-const styles = StyleSheet.create({
-
-});
