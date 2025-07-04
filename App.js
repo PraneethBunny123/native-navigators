@@ -9,8 +9,22 @@ const Drawer = createDrawerNavigator()
 export default function App() {
     return (
         <NavigationContainer>
-            <Drawer.Navigator>
-                <Drawer.Screen name="welcome" component={WelcomeScreen} />
+            <Drawer.Navigator
+                screenOptions={{
+                    headerStyle: {backgroundColor: '#3c0a6b'},
+                    headerTintColor: 'white',
+                    drawerActiveBackgroundColor: '#f0e1ff',
+                    drawerActiveTintColor: '3c06ab',
+                    drawerStyle: {backgroundColor: '#ccc'}
+                }}
+            >
+                <Drawer.Screen 
+                    name="welcome" 
+                    component={WelcomeScreen} 
+                    options={{
+                        drawerLabel: 'Welcome Screen'
+                    }}    
+                />
                 <Drawer.Screen name="user" component={UserScreen} />
             </Drawer.Navigator>
         </NavigationContainer>
