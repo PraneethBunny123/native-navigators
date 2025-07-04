@@ -56,7 +56,7 @@ export default function App() {
                 screenOptions={{
                     headerStyle: {backgroundColor: '#3c0a6b'},
                     headerTintColor: 'white',
-
+                    tabBarActiveTintColor: '#3c0a6b'
                 }}
             >
                 <BottomTab.Screen 
